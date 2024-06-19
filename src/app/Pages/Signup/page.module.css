@@ -1,0 +1,52 @@
+.loginPage {
+  background-image: url(https://cdn.prod.website-files.com/5beab12…/6514d58…_Header%20Dots.svg),
+    linear-gradient(#f3f0ff, #f0f6ff 76%, #fff);
+  background-position: 50% 80px, 0 0;
+  background-repeat: no-repeat, repeat;
+  background-size: auto, auto;
+  border-radius: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 95vh;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 120px 3%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.globalShadowB {
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 8px 24px rgba(18, 7, 143, 0.04), 0 1px 2px rgba(14, 9, 72, 0.08),
+    0 0 0 1px rgba(14, 9, 72, 0.04), inset 0 0 3px rgba(19, 39, 108, 0.04),
+    inset 0 -4px 1px rgba(19, 39, 109, 0.06);
+}
+
+.accountBlock {
+  background-color: #fff;
+  text-align: center;
+  border-radius: 20px;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 380px;
+  margin-bottom: 24px;
+  padding: 40px 32px 32px;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 8px 24px rgba(18, 7, 143, 0.04), 0 1px 2px rgba(14, 9, 72, 0.08),
+    0 0 0 1px rgba(14, 9, 72, 0.04), inset 0 0 3px rgba(19, 39, 108, 0.04),
+    inset 0 -4px 1px rgba(19, 39, 109, 0.06);
+}
+
+.loginFormWrap {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
