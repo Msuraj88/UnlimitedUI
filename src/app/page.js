@@ -10,8 +10,6 @@ import Typography from "@mui/joy/Typography";
 import Button from "@mui/joy/Button";
 import { Container, Grid } from "@mui/joy";
 import FigmaCard from "./Components/FigmaCard/FigmaCard";
-import Masonry from "./Components/MasonryGrid/MasonryGrid";
-import MasonryGrid from "@/app/Components/MasonryGrid/MasonryGrid";
 
 export default function Home() {
   const breakpointColumnsObj = {
