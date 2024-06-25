@@ -1,19 +1,11 @@
 import React from "react";
 import ExploreHeader from "../../Components/ExploreHeader/ExploreHeader";
-import { Typography } from "@mui/joy";
 import Button from "@mui/joy/Button";
-import IconButton from "@mui/joy/IconButton";
-import FavoriteBorder from "@mui/icons-material/FavoriteBorder";
-import KeyboardTabOutlinedIcon from "@mui/icons-material/KeyboardTabOutlined";
-import FilterListIcon from "@mui/icons-material/FilterList";
 import FilterIcon from "@mui/icons-material/FilterList";
 import FigmaCard from "../../Components/FigmaCard/FigmaCard";
-
 import FilterPanel from "../../Components/FilterPanel/FilterPanel";
-
 import Box from "@mui/joy/Box";
-
-import styles from "./page.module.css";
+import styles from "./index.module.css";
 
 export default function Home() {
   return (
