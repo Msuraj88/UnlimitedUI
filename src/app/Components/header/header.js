@@ -17,7 +17,8 @@ import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 import Input from "@mui/joy/Input";
 import styles from "./Header.module.css";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const Header = () => {
   const theme = useTheme();
@@ -27,15 +28,21 @@ const Header = () => {
   const handleDrawerToggle = () => {
     setDrawerOpen(!drawerOpen);
   };
-
+  const router = useRouter();
   const menuItems = ["Templates", "Components"];
-
+  const handleSignUpPage = () => {
+    router.push("/login");
+  };
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ width: 250 }} role="presentation">
       <List>
         {menuItems.map((text) => (
           <ListItem button key={text}>
-            <ListItemText primary={text} />
+            <ListItemText
+              primary={text}
+              type="button"
+              onClick={() => router.push("/exploreComponents")}
+            />
           </ListItem>
         ))}
       </List>
@@ -45,7 +52,10 @@ const Header = () => {
           <ListItemText primary="Login" />
         </ListItem>
         <ListItem button>
-          <ListItemText primary="Sign Up" />
+          <ListItemText
+            primary="Sign Up"
+            onClick={() => router.push("/signup")}
+          />
         </ListItem>
       </List>
     </Box>
@@ -88,17 +98,33 @@ const Header = () => {
         }}
       >
         {menuItems.map((item) => (
-          <Button key={item} variant="plain" color="neutral" sx={{ mx: 1 }}>
+          <Button
+            key={item}
+            variant="plain"
+            color="neutral"
+            sx={{ mx: 1 }}
+            onClick={() => router.push("/exploreComponents")}
+          >
             {item}
           </Button>
         ))}
       </Box>
       <Box sx={{ display: { xs: "none", md: "flex" }, ml: "auto" }}>
         <Input placeholder="Search here.." />
-        <Button variant="soft" color="secondary" sx={{ mx: 1 }}>
+        <Button
+          variant="solid"
+          color="primary"
+          sx={{ mx: 1 }}
+          onClick={handleSignUpPage}
+        >
           Login
         </Button>
-        <Button variant="solid" color="primary" sx={{ mx: 1 }}>
+        <Button
+          variant="solid"
+          color="primary"
+          sx={{ mx: 1 }}
+          onClick={() => router.push("/signup")}
+        >
           Sign Up
         </Button>
       </Box>

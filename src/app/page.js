@@ -10,6 +10,7 @@ import Typography from "@mui/joy/Typography";
 import Button from "@mui/joy/Button";
 import { Container, Grid } from "@mui/joy";
 import FigmaCard from "./Components/FigmaCard/FigmaCard";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const breakpointColumnsObj = {
@@ -17,7 +18,7 @@ export default function Home() {
     1100: 2,
     700: 1,
   };
-
+  const router = useRouter();
   return (
     <div>
       <Header />
@@ -82,6 +83,7 @@ export default function Home() {
                 color="primary"
                 size="lg"
                 sx={{ fontSize: { xs: "1rem", md: "1.25rem" } }}
+                onClick={() => router.push("/login")}
               >
                 Get Started
               </Button>
