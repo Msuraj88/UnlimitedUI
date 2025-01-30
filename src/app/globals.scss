@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import './_variables';
+
+html,
+body {
+  background: $color-bg;
+  font-family: "Inter", sans-serif !important;
+
+  p {
+    margin: 0px;
+  }
+}
+
+.app-bg-Dark {
+  background-color: $color-bg;
+  color: $color-text;
+}
+
+.f-18 {
+  font-size: 18px;
+}
+
+.mt-28 {
+  margin-top: 28px;
+}
+
+.mt-60 {
+  margin-top: 60px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.divider {
+  border: none;
+  /* Removes the default border */
+  height: 2px;
+  /* Sets the thickness of the line */
+  background: #2F2F2F;
+  /* Adds a gradient */
+  margin: 32px 0 !important;
+  /* Adds spacing around the line */
+}
+
+.view-more-btn {
+  padding: 12px 32px;
+
+}
+
+.gradient-btn {
+  background: linear-gradient(45deg, #5546E6, #D347EE, #F7711D);
+  background-clip: border-box;
+  box-shadow: 0 0 0 2px transparent;
+  border-radius: 8px;
+  color: $color-white;
+  border: none;
+}
+
+
+.Hero-section {
+  padding-top: 80px;
+
+  .Hero-Label {
+    p {
+      display: block;
+      background: #000;
+      width: fit-content;
+      margin: 0 auto;
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .hero-title {
+    font-size: 52px;
+    font-weight: 600;
+    color: $color-white;
+  }
+
+  .gradient-text {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #5546E6, #D347EE, #F7711D);
+    /* Your custom gradient */
+    -webkit-background-clip: text;
+    /* Clips the gradient to the text */
+    -webkit-text-fill-color: transparent;
+    /* Makes the text transparent */
+  }
+
+}
+
+.searc-box {
+
+  /* From Uiverse.io by LightAndy1 */
+  .group {
+    display: flex;
+    line-height: 28px;
+    align-items: center;
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .input {
+    font-family: "Montserrat", sans-serif;
+    width: 100%;
+    height: 45px;
+    padding-left: 2.5rem;
+    box-shadow: 0 0 0 1.5px #2b2c37, 0 0 25px -17px #000;
+    border: 0;
+    border-radius: 12px;
+    background-color: #16171d;
+    outline: none;
+    color: $color-text;
+    transition: all 0.25s cubic-bezier(0.19, 1, 0.22, 1);
+    cursor: text;
+    z-index: 0;
+  }
+
+  .input::placeholder {
+    color: #bdbecb;
+  }
+
+  .input:hover {
+    box-shadow: 0 0 0 2.5px #2f303d, 0px 0px 25px -15px #000;
+  }
+
+  .input:active {
+    transform: scale(0.95);
+  }
+
+  .input:focus {
+    box-shadow: 0 0 0 2.5px #2f303d;
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 1rem;
+    fill: #bdbecb;
+    width: 1rem;
+    height: 1rem;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+}
+
+.template-card {
+
+  .tempate-image {
+    border-radius: 8px 8px 0px 0px;
+    overflow: hidden;
+    max-height: 230px;
+  }
+
+  border: none !important;
+
+  .card-body {
+    background-color: #262626;
+    color: #fff;
+    padding: 16px;
+    border-radius: 0px 0px 14px 14px;
+
+    .card-title {
+      font-size: 18px;
+      white-space: nowrap;
+      width: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 16px;
+    }
+
+    .card-body-row2 {
+      display: flex;
+      justify-content: space-between;
+
+      .card-category-label {
+        font-size: 12px;
+        color: #747474;
+        border: 1px solid #747474;
+        padding: 4px 6px;
+        border-radius: 50px;
+      }
+
+      .card-licience-label {
+        font-size: 16px;
+        color: #38CB1E;
+      }
+
+    }
+  }
+}
+
+.News-letter-section {
+  .news-letter-box {
+    background: #262626;
+    padding: 42px 150px;
+    border-radius: 8px;
+    border: 1px solid #626262;
+
+    h1 {
+      color: $color-white;
+    }
+
+    .Hero-Label {
+      display: block;
+      background: #000;
+      width: -moz-fit-content;
+      width: fit-content;
+      margin: 0 auto;
+      padding: 8px 18px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+    }
+
+    .input-wrapper {
+      width: 100%;
+      height: 45px;
+      border-radius: 20px;
+      padding: 5px;
+      box-sizing: content-box;
+      display: flex;
+      align-items: center;
+      background-color: #222222;
+      border: 1px solid #626262;
+      margin-top: 42px;
+
+      .icon {
+        width: 30px;
+        fill: rgb(255, 255, 255);
+        margin-left: 8px;
+        transition: all 0.3s;
+      }
+
+      .input {
+        width: 76%;
+        height: 100%;
+        border: none;
+        outline: none;
+        padding-left: 15px;
+        background-color: #292524;
+        color: white;
+        font-size: 1em;
+      }
+
+      .input:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #292524 inset;
+        -webkit-text-fill-color: #ffffff;
+      }
+
+      .Subscribe-btn {
+        height: 100%;
+        width: 95px;
+        border: none;
+        border-radius: 15px;
+        color: rgb(0, 0, 0);
+        cursor: pointer;
+        background-color: #ffffff;
+        font-weight: 500;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        transition: all 0.3s;
+      }
+
+      .arrow {
+        /* display: none; */
+        position: absolute;
+        margin-right: 150px;
+        transition: all 0.3s;
+      }
+
+      .input-wrapper:active .icon {
+        transform: scale(1.3);
+      }
+
+      .Subscribe-btn:hover {
+        color: white;
+      }
+
+      .Subscribe-btn:hover .arrow {
+        margin-right: 0;
+        animation: jello-vertical 0.9s both;
+        transform-origin: right;
+      }
+
+      @keyframes jello-vertical {
+        0% {
+          transform: scale3d(1, 1, 1);
+        }
+
+        30% {
+          transform: scale3d(0.75, 1.25, 1);
+        }
+
+        40% {
+          transform: scale3d(1.25, 0.75, 1);
+        }
+
+        50% {
+          transform: scale3d(0.85, 1.15, 1);
+        }
+
+        65% {
+          transform: scale3d(1.05, 0.95, 1);
+        }
+
+        75% {
+          transform: scale3d(0.95, 1.05, 1);
+        }
+
+        100% {
+          transform: scale3d(1, 1, 1);
+        }
+      }
+
+      .Subscribe-btn:active {
+        transform: scale(0.9);
+      }
+
+    }
+  }
+}
+
+.Footer-section {
+  background-color: #101010;
+
+  .footer-menu-list {
+    li {
+      padding-top: 14px;
+
+      a {
+        font-size: 14px;
+        text-decoration: none;
+        color: $color-text;
+      }
+
+      a :hover {
+        color: $color-white;
+      }
+    }
+
+  }
+}

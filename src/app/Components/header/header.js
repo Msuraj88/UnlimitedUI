@@ -1,138 +1,36 @@
 "use client";
+import Link from 'next/link';
+import Button from 'react-bootstrap/Button';
+import Container from 'react-bootstrap/Container';
+import Form from 'react-bootstrap/Form';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-import React, { useState } from "react";
-import Box from "@mui/joy/Box";
-import Button from "@mui/joy/Button";
-import IconButton from "@mui/joy/IconButton";
-import Typography from "@mui/joy/Typography";
-import Sheet from "@mui/joy/Sheet";
-import MenuIcon from "@mui/icons-material/Menu";
-import Drawer from "@mui/material/Drawer";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import { useTheme } from "@mui/material/styles";
-import Image from "next/image";
-import Input from "@mui/joy/Input";
-import styles from "./Header.module.css";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-
-const Header = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const [drawerOpen, setDrawerOpen] = useState(false);
-
-  const handleDrawerToggle = () => {
-    setDrawerOpen(!drawerOpen);
-  };
-  const router = useRouter();
-  const menuItems = ["Templates", "Components"];
-  const handleSignUpPage = () => {
-    router.push("/login");
-  };
-  const drawer = (
-    <Box onClick={handleDrawerToggle} sx={{ width: 250 }} role="presentation">
-      <List>
-        {menuItems.map((text) => (
-          <ListItem button key={text}>
-            <ListItemText
-              primary={text}
-              type="button"
-              onClick={() => router.push("/exploreComponents")}
-            />
-          </ListItem>
-        ))}
-      </List>
-      <Divider />
-      <List>
-        <ListItem button onClick={() => router.push("/login")}>
-          <ListItemText primary="Login" />
-        </ListItem>
-        <ListItem button>
-          <ListItemText
-            primary="Sign Up"
-            onClick={() => router.push("/signup")}
-          />
-        </ListItem>
-      </List>
-    </Box>
-  );
-
+function NavScrollExample() {
   return (
-    <Sheet
-      variant="solid"
-      sx={{
-        display: "flex",
-        justifyContent: "space-between",
-        alignItems: "center",
-        p: 2,
-        bgcolor: "background.body",
-      }}
-    >
-      {isMobile && (
-        <IconButton
-          edge="start"
-          color="neutral"
-          aria-label="menu"
-          onClick={handleDrawerToggle}
-        >
-          <MenuIcon />
-        </IconButton>
-      )}
-      <Image
-        src="/vercel.svg"
-        alt="Vercel Logo"
-        width={100}
-        height={24}
-        priority
-        className={styles.logo}
-      />
-      <Box
-        sx={{
-          display: { xs: "none", md: "flex" },
-          flexGrow: 1,
-          alignItems: "center",
-        }}
-      >
-        {menuItems.map((item) => (
-          <Button
-            key={item}
-            variant="plain"
-            color="neutral"
-            sx={{ mx: 1 }}
-            onClick={() => router.push("/exploreComponents")}
+    <Navbar expand="lg" className="app-bg-Dark home-header">
+      <Container >
+        <Navbar.Brand href="#">Navbar scroll</Navbar.Brand>
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav
+            className="me-auto my-2 my-lg-0 g-5"
+            style={{ maxHeight: '100px' }}
+            navbarScroll
           >
-            {item}
-          </Button>
-        ))}
-      </Box>
-      <Box sx={{ display: { xs: "none", md: "flex" }, ml: "auto" }}>
-        <Input placeholder="Search here.." />
-        <Button
-          variant="solid"
-          color="primary"
-          sx={{ mx: 1 }}
-          onClick={handleSignUpPage}
-        >
-          Login
-        </Button>
-        <Button
-          variant="solid"
-          color="primary"
-          sx={{ mx: 1 }}
-          onClick={() => router.push("/signup")}
-        >
-          Sign Up
-        </Button>
-      </Box>
-      <Drawer anchor="left" open={drawerOpen} onClose={handleDrawerToggle}>
-        {drawer}
-      </Drawer>
-    </Sheet>
+            <Nav.Link href="#action1">Home</Nav.Link>
+            <Nav.Link href="Pages/browse" className='browse-btn'>Browse</Nav.Link>
+     
+          </Nav>
+          <Form className="d-flex">
+         
+            <Button variant="outline-success">Login</Button>
+          </Form>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
-};
+}
 
-export default Header;
+export default NavScrollExample;
